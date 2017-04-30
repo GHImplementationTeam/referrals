@@ -76,8 +76,9 @@ STATICFILES_DIRS = (
 )
 
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 DATABASES = {
     'default': {
         'HOST': 'gh-implementation-dev.cm8v8ipcnkcx.us-west-2.rds.amazonaws.com',
