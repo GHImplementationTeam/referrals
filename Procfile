@@ -1,1 +1,1 @@
-web: gunicorn hackathon.wsgi --log-file -
+web: gunicorn referrals.wsgi --log-file -
