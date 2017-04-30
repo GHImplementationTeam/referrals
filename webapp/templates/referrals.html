@@ -1,0 +1,28 @@
+<!doctype html>
+
+<head>
+    {% load staticfiles %}
+    {% include "base/links.html" %}
+    {% include "base/less_headers/referrals_less.html" %}
+</head>
+
+<script id="referrals-template" type="text/template">
+    {% include "partials/referrals/referrals_base.html" %}
+</script>
+
+<script id="notes-modal-template" type="text/template">
+    {% include "partials/referrals/notes_modal.html" %}
+</script>
+
+<body>
+    <div id="referrals">
+
+    </div>
+</body>
+
+<script type="text/javascript" src="{% static "js/referrals.js" %}"></script>
+<script type="text/javascript">
+    var referralsView = new cr.ReferralsView();
+</script>
+
+</html>

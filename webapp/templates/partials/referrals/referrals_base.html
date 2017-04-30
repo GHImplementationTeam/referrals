@@ -1,0 +1,97 @@
+{% verbatim %}
+<div class="row">
+    <div class="col s12">
+        <div class="card incoming">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s9">
+                        <span class="card-title">Incoming Referrals</span>
+                    </div>
+                    <div class="col s3">
+                        <input type="text" placeholder="Search incoming" name="" value="">
+                    </div>
+                </div>
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th>Client Name</th>
+                            <th>Referral Date</th>
+                            <th>Referring Entity</th>
+                            <th>Referral Status</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{# _.each(incomingReferrals, function (iR) { }}
+                            <tr>
+                                <td>{{iR.client_name}}</td>
+                                <td>{{iR.date_referred}}</td>
+                                <td>{{iR.referring_entity}}</td>
+                                <td>
+                                    <select class="browser-default">
+                                        <option{{# if (iR.referral_status === 'arrived') { }} selected{{# } }} value="arrived">Arrived</option>
+                                        <option{{# if (iR.referral_status === 'accepted') { }} selected{{# } }} value="accepted">Accepted</option>
+                                        <option{{# if (iR.referral_status === 'completed') { }} selected{{# } }} value="completed">Completed</option>
+                                        <option{{# if (iR.referral_status === 'denied') { }} selected{{# } }} value="denied">Denied</option>
+                                    </select>
+                                </td>
+                                <td><a style="cursor: pointer;" class="notes-opener" data-section="incoming" data-id="{{iR.id}}">Notes</a></td>
+                            </tr>
+                        {{# }); }}
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-action">
+                <a href="#">Save Changes</a>
+            </div>
+        </div>
+    </div>
+    <div class="col s12">
+        <div class="card outgoing">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s9">
+                        <span class="card-title">Outgoing Referrals</span>
+                    </div>
+                    <div class="col s3">
+                        <input type="text" placeholder="Search outgoing" name="" value="">
+                    </div>
+                </div>
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th>Client Name</th>
+                            <th>Referral Date</th>
+                            <th>Referring Entity</th>
+                            <th>Referral Status</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{# _.each(outgoingReferrals, function (oR) { }}
+                            <tr>
+                                <td>{{oR.client_name}}</td>
+                                <td>{{oR.date_referred}}</td>
+                                <td>{{oR.referring_entity}}</td>
+                                <td>
+                                    <select class="browser-default">
+                                        <option{{# if (oR.referral_status === 'arrived') { }} selected{{# } }} value="arrived">Arrived</option>
+                                        <option{{# if (oR.referral_status === 'accepted') { }} selected{{# } }} value="accepted">Accepted</option>
+                                        <option{{# if (oR.referral_status === 'completed') { }} selected{{# } }} value="completed">Completed</option>
+                                        <option{{# if (oR.referral_status === 'denied') { }} selected{{# } }} value="denied">Denied</option>
+                                    </select>
+                                </td>
+                                <td><a style="cursor: pointer;" class="notes-opener" data-section="outgoing" data-id="{{oR.id}}">Notes</a></td>
+                            </tr>
+                        {{# }); }}
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-action">
+                <a href="#">Save Changes</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-holder"></div>
+{% endverbatim %}
