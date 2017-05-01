@@ -11,7 +11,7 @@
                         <input type="text" placeholder="Search incoming" name="" value="">
                     </div>
                 </div>
-                <table class="striped">
+                <table class="bordered">
                     <thead>
                         <tr>
                             <th>Client Name</th>
@@ -41,9 +41,9 @@
                     </tbody>
                 </table>
             </div>
-            <div class="card-action">
+            <!-- <div class="card-action">
                 <a href="#">Save Changes</a>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="col s12">
@@ -57,12 +57,12 @@
                         <input type="text" placeholder="Search outgoing" name="" value="">
                     </div>
                 </div>
-                <table class="striped">
+                <table class="bordered">
                     <thead>
                         <tr>
                             <th>Client Name</th>
                             <th>Referral Date</th>
-                            <th>Referring Entity</th>
+                            <th>Referred To</th>
                             <th>Referral Status</th>
                             <th>Notes</th>
                         </tr>
@@ -72,7 +72,7 @@
                             <tr>
                                 <td>{{oR.client_name}}</td>
                                 <td>{{oR.date_referred}}</td>
-                                <td>{{oR.referring_entity}}</td>
+                                <td>{{oR.referring_to}}</td>
                                 <td>
                                     <select class="browser-default">
                                         <option{{# if (oR.referral_status === 'arrived') { }} selected{{# } }} value="arrived">Arrived</option>
@@ -84,12 +84,25 @@
                                 <td><a style="cursor: pointer;" class="notes-opener" data-section="outgoing" data-id="{{oR.id}}">Notes</a></td>
                             </tr>
                         {{# }); }}
+                        <tr>
+                            <td><input type="text" placeholder="Client name..." class="client-name-input"></td>
+                            <td>5/1/2017</td>
+                            <td>
+                                <select id="org-chooser" class="browser-default org-chooser">
+                                    <option value="St. Patrick Center">St. Patrick Center</option>
+                                    <option value="Our Lady's Inn">Our Lady's Inn</option>
+                                    <option value="Covenant House">Covenant House</option>
+                                </select>
+                            </td>
+                            <td><a style="cursor: pointer;" class="add-referral">Add Referral</a></td>
+                            <td></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="card-action">
+            <!-- <div class="card-action">
                 <a href="#">Save Changes</a>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

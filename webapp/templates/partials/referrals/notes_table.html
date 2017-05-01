@@ -1,0 +1,25 @@
+{% verbatim %}
+    <table class="bordered">
+        <thead>
+            <tr>
+                <th>Text</th>
+                <th>Author</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{# _.each(notes, function (n) { }}
+                <tr>
+                    <td>{{n.text}}</td>
+                    <td>{{n.author}}</td>
+                    <td>{{n.date}}</td>
+                </tr>
+            {{# }); }}
+            <tr>
+                <td><input type="text" placeholder="New note..." class="add-note-input"></td>
+                <td><a style="cursor: pointer;" class="add-note" data-id="{{id}}" data-section="{{section}}">Add Note</a></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+{% endverbatim %}

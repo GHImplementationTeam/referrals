@@ -11,37 +11,72 @@ class ReferralsView(View):
 
         if request.GET['incoming'] == 'true':
             data = [
-                {
-                    'id': 1,
-                    'client_name': 'John Smith',
-                    'date_referred': '1/1/2017',
-                    'referring_entity': 'St. Patrick Center',
-                    'referring_to': 'your_org',
-                    'referral_status': 'accepted',
-                    'notes': [
-                        {
-                            'author': 'Sally Johnson',
-                            'text': 'This man has been referred.',
-                            'date': '1/1/2017'
-                        }
-                    ]
-                },
-                {
-                    'id': 2,
-                    'client_name': 'Jane Smith',
-                    'date_referred': '1/1/2017',
-                    'referring_entity': 'St. Patrick Center',
-                    'referring_to': 'your_org',
-                    'referral_status': 'accepted',
-                    'notes': [
-                        {
-                            'author': 'Sally Johnson',
-                            'text': 'This man has been referred.',
-                            'date': '1/1/2017'
-                        }
-                    ]
-                }
-            ]
+                    {
+                        'id': 1,
+                        'client_name': 'Ivory Jackson',
+                        'date_referred': '1/15/2017',
+                        'referring_entity': 'St. Patrick Center',
+                        'referring_to': 'your_org',
+                        'referral_status': 'arrived',
+                        'notes': [
+                            {
+                                'author': 'Jessica Lister',
+                                'text': 'This man has been referred.',
+                                'date': '1/15/2017'
+                            },
+                            {
+                                'author': 'Jessica Lister',
+                                'text': 'Referral completed.',
+                                'date': '1/15/2017'
+                            }
+                        ]
+                    },
+                    {
+                        'id': 2,
+                        'client_name': 'Matthew Pannakuk',
+                        'date_referred': '1/18/2017',
+                        'referring_entity': 'Sts Peter and Paul',
+                        'referring_to': 'your_org',
+                        'referral_status': 'accepted',
+                        'notes': [
+                            {
+                                'author': 'Sally Johnson',
+                                'text': 'This man has been referred.',
+                                'date': '1/18/2017'
+                            }
+                        ]
+                    },
+                    {
+                        'id': 3,
+                        'client_name': 'John Drake',
+                        'date_referred': '2/2/2017',
+                        'referring_entity': 'Sts Peter and Paul',
+                        'referring_to': 'your_org',
+                        'referral_status': 'denied',
+                        'notes': [
+                            {
+                                'author': 'Sally Johnson',
+                                'text': 'This man has been referred.',
+                                'date': '2/2/2017'
+                            }
+                        ]
+                    },
+                    {
+                        'id': 4,
+                        'client_name': 'Vincent Samuels',
+                        'date_referred': '2/12/2017',
+                        'referring_entity': 'Covenant House',
+                        'referring_to': 'your_org',
+                        'referral_status': 'completed',
+                        'notes': [
+                            {
+                                'author': 'Ben Champion',
+                                'text': 'This man has been referred.',
+                                'date': '2/12/2017'
+                            }
+                        ]
+                    }
+                ]
         else:
             data = []
 

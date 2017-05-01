@@ -79,16 +79,16 @@ STATICFILES_DIRS = (
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-DATABASES = {
-    'default': {
-        'HOST': 'gh-implementation-dev.cm8v8ipcnkcx.us-west-2.rds.amazonaws.com',
-        'PORT': '5432',
-        'NAME': 'dev',
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'USER': 'ghadmin',
-        'PASSWORD': 'ghimplementationteamtestdb',
-    },
-}
+# DATABASES = {
+#     'default': {
+#         'HOST': 'gh-implementation-dev.cm8v8ipcnkcx.us-west-2.rds.amazonaws.com',
+#         'PORT': '5432',
+#         'NAME': 'dev',
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'USER': 'ghadmin',
+#         'PASSWORD': 'ghimplementationteamtestdb',
+#     },
+# }
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
