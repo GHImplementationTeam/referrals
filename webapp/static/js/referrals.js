@@ -37,7 +37,7 @@ cr.ReferralsView = BB.View.extend({
         }
 
         this.$el.empty().append(this.template({
-            incomingReferrals: this.incomingCollection.toJSON(),
+            incomingReferrals: this.incomingCollection.toJSON().reverse(),
             outgoingReferrals: this.outgoingCollection.toJSON(),
         }));
     },
