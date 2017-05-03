@@ -53,6 +53,7 @@ cr.ReferralsView = BB.View.extend({
             org = this.$('.org-chooser').val();
 
         this.outgoingCollection.add({
+            id: Math.round(Math.random()*10000000),
             client_name: name,
             date_referred: new Date().toISOString().slice(0, 10),
             referring_entity: 'Shelter #1',
