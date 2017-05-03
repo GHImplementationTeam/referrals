@@ -14,27 +14,22 @@ class ReferralsView(View):
                     {
                         'id': 1,
                         'client_name': 'Ivory Jackson',
-                        'date_referred': '1/15/2017',
+                        'date_referred': '5/2/2017',
                         'referring_entity': 'St. Patrick Center',
                         'referring_to': 'your_org',
                         'referral_status': 'arrived',
                         'notes': [
                             {
                                 'author': 'Jessica Lister',
-                                'text': 'This man has been referred.',
-                                'date': '1/15/2017'
-                            },
-                            {
-                                'author': 'Jessica Lister',
-                                'text': 'Referral completed.',
-                                'date': '1/15/2017'
+                                'text': 'I’m referring Ivory to you as he’s couch surfing with a family member near your shelter. For now he’s stable but if he needs an emergency shelter in the future, yours will likely be the closest. Also it will be easier for him to visit a caseworker at your site.',
+                                'date': '5/2/2017'
                             }
                         ]
                     },
                     {
                         'id': 2,
                         'client_name': 'Matthew Pannakuk',
-                        'date_referred': '1/18/2017',
+                        'date_referred': '1/28/2017',
                         'referring_entity': 'Sts Peter and Paul',
                         'referring_to': 'your_org',
                         'referral_status': 'accepted',
@@ -42,7 +37,7 @@ class ReferralsView(View):
                             {
                                 'author': 'Sally Johnson',
                                 'text': 'This man has been referred.',
-                                'date': '1/18/2017'
+                                'date': '1/28/2017'
                             }
                         ]
                     },

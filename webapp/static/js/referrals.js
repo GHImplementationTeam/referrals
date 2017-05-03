@@ -55,7 +55,7 @@ cr.ReferralsView = BB.View.extend({
         this.outgoingCollection.add({
             id: 1,
             client_name: name,
-            date_referred: '5/1/2017',
+            date_referred: '5/2/2017',
             referring_entity: 'Shelter #1',
             referring_to: org,
             referral_status: 'arrived',
