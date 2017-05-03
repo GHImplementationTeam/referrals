@@ -12,21 +12,6 @@ class ReferralsView(View):
         if request.GET['incoming'] == 'true':
             data = [
                     {
-                        'id': 1,
-                        'client_name': 'Ivory Jackson',
-                        'date_referred': '2017-01-28',
-                        'referring_entity': 'St. Patrick Center',
-                        'referring_to': 'your_org',
-                        'referral_status': 'arrived',
-                        'notes': [
-                            {
-                                'author': 'Jessica Lister',
-                                'text': "I'm referring Ivory to you as he's couch surfing with a family member near your shelter. For now hes stable but if he needs an emergency shelter in the future, yours will likely be the closest. Also it will be easier for him to visit a caseworker at your site.",
-                                'date': '2017-01-28'
-                            }
-                        ]
-                    },
-                    {
                         'id': 2,
                         'client_name': 'Matthew Pannakuk',
                         'date_referred': '2017-02-02',
@@ -59,7 +44,7 @@ class ReferralsView(View):
                     {
                         'id': 4,
                         'client_name': 'Vincent Samuels',
-                        'date_referred': '2017-05-07',
+                        'date_referred': '2017-03-07',
                         'referring_entity': 'Covenant House',
                         'referring_to': 'your_org',
                         'referral_status': 'completed',
@@ -67,10 +52,25 @@ class ReferralsView(View):
                             {
                                 'author': 'Ben Champion',
                                 'text': 'This man has been referred.',
-                                'date': '2017-05-07'
+                                'date': '2017-03-07'
                             }
                         ]
-                    }
+                    },
+                    {
+                        'id': 1,
+                        'client_name': 'Ivory Jackson',
+                        'date_referred': '2017-05-02',
+                        'referring_entity': 'St. Patrick Center',
+                        'referring_to': 'your_org',
+                        'referral_status': 'arrived',
+                        'notes': [
+                            {
+                                'author': 'Jessica Lister',
+                                'text': "I'm referring Ivory to you as he's couch surfing with a family member near your shelter. For now hes stable but if he needs an emergency shelter in the future, yours will likely be the closest. Also it will be easier for him to visit a caseworker at your site.",
+                                'date': '2017-05-02'
+                            }
+                        ]
+                    },
                 ]
         else:
             data = []
