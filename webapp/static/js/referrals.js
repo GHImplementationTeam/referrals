@@ -53,9 +53,8 @@ cr.ReferralsView = BB.View.extend({
             org = this.$('.org-chooser').val();
 
         this.outgoingCollection.add({
-            id: 1,
             client_name: name,
-            date_referred: '5/2/2017',
+            date_referred: new Date().toISOString().slice(0, 10),
             referring_entity: 'Shelter #1',
             referring_to: org,
             referral_status: 'arrived',
@@ -91,7 +90,7 @@ cr.ReferralsView = BB.View.extend({
             var refData = _.findWhere(this.outgoingCollection.toJSON(), {id: refId});
         }
 
-        refData.notes.push({author: 'Drew Winship', text: text, date: '5/2/2017'});
+        refData.notes.push({author: 'Drew Winship', text: text, date: new Date().toISOString().slice(0, 10)});
         this.$('.notes-row').empty().append(this.notesTemplate(_.extend(refData, {section: section})));
     },
 });
