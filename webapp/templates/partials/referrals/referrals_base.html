@@ -73,15 +73,11 @@
                                 <td>{{oR.client_name}}</td>
                                 <td>{{oR.date_referred}}</td>
                                 <td>{{oR.referring_to}}</td>
+                                <td>{{oR.referral_status}}</td>
                                 <td>
-                                    <select class="browser-default">
-                                        <option{{# if (oR.referral_status === 'arrived') { }} selected{{# } }} value="arrived">Arrived</option>
-                                        <option{{# if (oR.referral_status === 'accepted') { }} selected{{# } }} value="accepted">Accepted</option>
-                                        <option{{# if (oR.referral_status === 'completed') { }} selected{{# } }} value="completed">Completed</option>
-                                        <option{{# if (oR.referral_status === 'denied') { }} selected{{# } }} value="denied">Denied</option>
-                                    </select>
+                                    <a style="cursor: pointer;" class="notes-opener" data-section="outgoing" data-id="{{oR.id}}">Notes</a>
+                                    <a class="waves-effect waves-green btn-flat delete-referral" style="font-size: 2rem; float: right;" data-id="{{oR.id}}">&times;</a>
                                 </td>
-                                <td><a style="cursor: pointer;" class="notes-opener" data-section="outgoing" data-id="{{oR.id}}">Notes</a></td>
                             </tr>
                         {{# }); }}
                         <tr>

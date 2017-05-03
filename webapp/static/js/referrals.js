@@ -45,7 +45,8 @@ cr.ReferralsView = BB.View.extend({
     events: {
         'click .add-referral': 'addReferral',
         'click .notes-opener': 'openNotesModal',
-        'click .add-note': 'addNote'
+        'click .add-note': 'addNote',
+        'click .delete-referral': 'deleteReferral'
     },
 
     addReferral: function (e) {
@@ -61,6 +62,14 @@ cr.ReferralsView = BB.View.extend({
             referral_status: 'arrived',
             notes: []
         });
+
+        this.render();
+    },
+
+    deleteReferral: function (e) {
+        var refId = parseInt($(e.target).attr('data-id'));
+
+        this.outgoingCollection.remove(refId);
 
         this.render();
     },
