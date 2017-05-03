@@ -91,7 +91,7 @@ cr.ReferralsView = BB.View.extend({
             var refData = _.findWhere(this.outgoingCollection.toJSON(), {id: refId});
         }
 
-        refData.notes.push({author: 'Drew Winship', text: text, date: '5/1/2017'});
+        refData.notes.push({author: 'Drew Winship', text: text, date: '5/2/2017'});
         this.$('.notes-row').empty().append(this.notesTemplate(_.extend(refData, {section: section})));
     },
 });

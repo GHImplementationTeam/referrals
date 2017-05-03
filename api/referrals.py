@@ -21,7 +21,7 @@ class ReferralsView(View):
                         'notes': [
                             {
                                 'author': 'Jessica Lister',
-                                'text': 'I’m referring Ivory to you as he’s couch surfing with a family member near your shelter. For now he’s stable but if he needs an emergency shelter in the future, yours will likely be the closest. Also it will be easier for him to visit a caseworker at your site.',
+                                'text': "I'm referring Ivory to you as he's couch surfing with a family member near your shelter. For now hes stable but if he needs an emergency shelter in the future, yours will likely be the closest. Also it will be easier for him to visit a caseworker at your site.",
                                 'date': '5/2/2017'
                             }
                         ]
